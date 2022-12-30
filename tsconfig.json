@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom"],
+    "declaration": true,
+    "resolveJsonModule": true,
+    "rootDir": "src"
+  },
+  "include": ["**/*.ts"], // which files to compile
+  "exclude": ["node_modules"] // which files to skip
+}
