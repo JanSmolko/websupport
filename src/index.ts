@@ -25,6 +25,10 @@ export class Websupport {
     this.user = user(this.apiService);
     this.zone = zone(this.apiService);
   }
+
+  getApiService(): ApiService {
+    return this.apiService;
+  }
 }
 
 export type { ApiServiceCredentials, ApiServiceOptions } from "./apiService";
