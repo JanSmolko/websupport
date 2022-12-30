@@ -2,6 +2,12 @@
   "name": "websupport",
   "version": "0.0.1",
   "license": "MIT",
+  "homepage": "https://github.com/JanSmolko/websupport",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JanSmolko/websupport.git"
+  },
+  "author": "Jan Smolko",
   "type": "module",
   "engines": {
     "node": ">=14.16"
