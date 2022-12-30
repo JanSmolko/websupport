@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { HmacSHA1, enc } from "crypto-js";
+import { createHmac } from "crypto";
 
 const version = 1;
 
@@ -28,11 +28,10 @@ const getAuthData = (
   const date = getGMTDate(timestamp);
   // add version to path
   const fullPath = `/v${version}${path}`;
+  const hmac = createHmac("sha1", apiSecret);
 
   return {
-    signature: enc.Hex.stringify(
-      HmacSHA1(`${method} ${fullPath} ${timestamp}`, apiSecret)
-    ),
+    signature: hmac.update(`${method} ${fullPath} ${timestamp}`).digest("hex"),
     date,
   };
 };
