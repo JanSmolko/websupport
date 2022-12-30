@@ -60,7 +60,7 @@ export type ApiServiceCredentials = {
 };
 
 export type ApiServiceOptions = Partial<{
-  params: Record<string, string>;
+  params: Record<string, number | string>;
 }>;
 
 export default class ApiService {
